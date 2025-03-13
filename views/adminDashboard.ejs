@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Kkelly Photography</title>
+
+    <!-- Slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/font-awesome.min.css" />
+
+    <!-- Custom styles -->
+    <link href="/styles.css" rel="stylesheet" />
+    <link href="/dashboard.css" rel="stylesheet" />
+    <link href="/responsive.css" rel="stylesheet" />
+
+    
+  </head>
+  <body>
+    <div class="hero_area">
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container-fluid">
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Call : +254 115432908 </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> Email : kelvinharro1@gmail.com </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="index.html">
+                <span> KKELLY PHOTOGRAPHY </span>
+              </a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="#navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class=""> </span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <h1>Booking Details</h1>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Service</th>
+            <th>Booking Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookings.forEach((booking) => { %>
+          <tr>
+            <td><%= booking.id %></td>
+            <td><%= booking.name %></td>
+            <td><%= booking.email %></td>
+            <td><%= booking.phone %></td>
+            <td><%= booking.service %></td>
+            <td><%= booking.booking_date %></td>
+            <td>
+              <input
+                type="checkbox"
+                <% if (new Date(booking.booking_date) < new Date()) { %> checked <% } %>
+                disabled />
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add these Bootstrap JS and jQuery scripts at the end of the body for the toggle to work -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

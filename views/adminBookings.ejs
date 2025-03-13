@@ -1,0 +1,31 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Service</th>
+      <th>Booking Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (bookings.length > 0) { %> <% bookings.forEach((booking) => { %>
+    <tr>
+      <td><%= booking.id %></td>
+      <td><%= booking.name %></td>
+      <td><%= booking.email %></td>
+      <td><%= booking.phone %></td>
+      <td><%= booking.service %></td>
+      <td><%= booking.booking_date %></td>
+    </tr>
+    <% }); %> <% } else { %>
+    <tr>
+      <td colspan="6">No bookings found.</td>
+    </tr>
+    <% } %>
+  </tbody>
+  <!-- Add these Bootstrap JS and jQuery scripts at the end of the body for the toggle to work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</table>

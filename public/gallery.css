@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .gallery-item {
+    margin: 10px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    width: 300px; /* You can adjust this to control the size */
+    height: 300px; /* Same height to ensure uniformity */
+    overflow: hidden; /* Ensures no overflow if the image aspect ratio doesn't match */
+  }
+  
+  .gallery-item img {
+    width: 100%; /* Make the image fill the container's width */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* This ensures the image is scaled properly and cropped if needed */
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

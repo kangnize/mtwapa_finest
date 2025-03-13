@@ -1,0 +1,138 @@
+/* Style for the header */
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container for the table */
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Styling for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+table tr:hover {
+  background-color: #eaeaea;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .contact_nav a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .navbar-brand span {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+input[type="checkbox"]:checked {
+  accent-color: green;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+table tr:hover {
+  background-color: #eaeaea;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
